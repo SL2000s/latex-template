@@ -1,0 +1,20 @@
+repos:
+  # - repo: https://github.com/cmhughes/latexindent.pl.git
+  #     rev: V3.24.5
+  #     hooks:
+  #       - id: latexindent
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+
+  # - repo: local
+  #   hooks:
+  #     - id: check-latex-errors
+  #       name: Check LaTeX errors
+  #       entry: bash -c "pdflatex -halt-on-error -interaction=nonstopmode main.tex"
+  #       language: system
+  #       files: \.tex$
