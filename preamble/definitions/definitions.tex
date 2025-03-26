@@ -1,0 +1,42 @@
+% -----------------------------------------------------------------------------
+% File: definitions.tex
+% Description: This file contains custom LaTeX definitions, macros, and 
+%              environments used throughout the document. It is part of the 
+%              preamble setup for the LaTeX template.
+% -----------------------------------------------------------------------------
+
+% Ensure this file can only be included once
+\providecommand{\definitionsLoaded}{} 
+\ifdefined\definitionsLoaded
+  \endinput
+\fi
+\def\definitionsLoaded{}
+
+% ------------ Custom Macros ------------
+\newcommand{\R}{\mathbb{R}} % Short for real numbers
+\newcommand{\N}{\mathbb{N}} % Short for natural numbers
+\newcommand{\set}[1]{\{#1\}} % Set notation
+\newcommand{\inner}[2]{\langle #1, #2 \rangle} % Inner product
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO:} #1}} % Easy-to-spot TODO notes
+
+\DeclareMathOperator*{\argmax}{arg\,max} % Argmax
+\DeclareMathOperator*{\argmin}{arg\,min} % Argmin
+
+% \DeclareSIUnit\ar{år} % Needs \usepackage{siunitx}, use with \SI{50}{\ar}
+
+\newcommand\norm[1]{\left\lVert#1\right\rVert} % Norm with double vertical bars
+\newcommand\normx[1]{\left\Vert#1\right\Vert} % Alternative norm with single vertical bars
+
+% ------------ Custom Environments ------------
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+% ------------ Renew Commands ------------
+%% Align comments and use "//" in algorithms (source: https://tex.stackexchange.com/questions/180212/how-to-align-comments-in-algorithm-code)
+% \renewcommand{\Comment}[2][.5\linewidth]{\leavevmode\hfill\makebox[#1][l]{//~#2}} 
