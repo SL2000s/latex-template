@@ -1,0 +1,32 @@
+%% remove automatic indent
+\setlength{\parskip}{2,0 ex plus 0,5 ex minus 0,2 ex}
+\setlength{\parindent}{0 em}
+
+% define argmin/argmax commands (needs \usepackage{amsmath})
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+% define norm command for norms in equations
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\newcommand\normx[1]{\left\Vert#1\right\Vert}
+
+% avoid split inline equations
+\relpenalty=9999
+\binoppenalty=9999
+
+% introduce theorems, cor, lemmas, definitins etc
+%\theoremstyle{definition}  %% makes theorems italics
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[chapter]
+
+% allign comments and use "//" in algorithms
+\renewcommand{\Comment}[2][.5\linewidth]{\leavevmode\hfill\makebox[#1][l]{//~#2}}  %% https://tex.stackexchange.com/questions/180212/how-to-align-comments-in-algorithm-code
+
+% define units        %needs \usepackage{siunitx}
+%\DeclareSIUnit\ar{år}
+%\SI{50}{\ar}
+
+% set tt to less bold compared to default value
+%\renewcommand{\ttdefault}{pcr}  % https://tex.stackexchange.com/questions/228053/how-to-set-the-default-typewriter-font
