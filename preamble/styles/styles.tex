@@ -3,11 +3,11 @@
 % -------------------------------
 
 % Ensure this file can only be included once
-\providecommand{\stylesLoaded}{} 
 \ifdefined\stylesLoaded
   \endinput
+\else
+  \def\stylesLoaded{}
 \fi
-\def\stylesLoaded{}
 
 % Remove automatic paragraph indentation and adjust paragraph spacing
 \setlength{\parskip}{2,0 ex plus 0,5 ex minus 0,2 ex} % Set paragraph spacing
