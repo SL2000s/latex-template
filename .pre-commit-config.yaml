@@ -18,3 +18,11 @@ repos:
   #       entry: bash -c "pdflatex -halt-on-error -interaction=nonstopmode main.tex"
   #       language: system
   #       files: \.tex$
+
+  - repo: local
+    hooks:
+      - id: replace-bad-chars
+        name: bad characters in .tex/.bib
+        entry: .githooks/replace-bad-chars.sh
+        language: system
+        files: \.(tex|bib)$
