@@ -1,8 +1,3 @@
-% -------------------------------
-% Style: some styling tweaks
-% -------------------------------
-
-% Ensure this file can only be included once
 \ifdefined\stylesLoaded
   \endinput
 \else
@@ -13,6 +8,6 @@
 \setlength{\parskip}{2,0 ex plus 0,5 ex minus 0,2 ex} % Set paragraph spacing
 \setlength{\parindent}{0 em} % Disable paragraph indentation
 
-% Avoid splitting inline equations across lines
-\relpenalty=9999 % Set high penalty for line breaks within inline math
-\binoppenalty=9999 % Set high penalty for line breaks at binary operators
+% Set high penalty for splitting inline equations across lines
+\relpenalty=9999
+\binoppenalty=9999
