@@ -1,0 +1,48 @@
+\ifdefined\defaultMacrosLoaded
+  \endinput
+\else
+  \def\defaultMacrosLoaded{}
+\fi
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{pifont}     % cmark, xmark
+\RequirePackage{stmaryrd}   % doubleBrackets
+\RequirePackage{xcolor}     % todo, note
+
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO:} #1}} % requires xcolor
+\newcommand{\note}[1]{\textcolor{green}{\textbf{NOTE:} #1}} % requires xcolor
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand\minTwo[2]{\min\!\left(#1\!,\;#2\right)}
+
+\newcommand{\parentheses}[1]{\left(#1\right)}
+\newcommand{\parenthesesNoSpace}[1]{\!\parantheses{#1}}
+\newcommand{\brackets}[1]{\left[#1\right]}
+\newcommand{\bracketsDouble}[1]{\left\llbracket#1\right\rrbracket}
+\newcommand{\braces}[1]{\lbrace#1\rbrace}
+\newcommand{\angles}[1]{\langle#1\rangle}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\round}[1]{\left\lfloor #1 \right\rceil}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\newcommand\abs[1]{\left\lvert#1\right\rvert}
+
+\newcommand{\bigO}[1]{\ensuremath{\mathcal{O}\!\parantheses{#1}}}
+\newcommand{\bigTheta}[1]{\ensuremath{\Theta\!\parantheses{#1}}}
+\newcommand{\bigOmega}[1]{\ensuremath{\Omega\!\parantheses{#1}}}
+
+\newcommand{\poly}[1]{\ensuremath{\operatorname{poly}\!\parantheses{#1}}}
+\newcommand{\polylog}[1]{\ensuremath{\operatorname{polylog}\!\parantheses{#1}}}
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
