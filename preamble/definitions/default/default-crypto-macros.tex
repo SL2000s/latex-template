@@ -1,0 +1,19 @@
+\ifdefined\defaultCryptoMacrosLoaded
+  \endinput
+\else
+  \def\defaultCryptoMacrosLoaded{}
+\fi
+
+% Secret sharing
+\newcommand{\party}[1]{P_{#1}}
+\newcommand{\parties}{\mathcal{P}}
+\newcommand{\numParties}{n}
+\newcommand{\sharing}[1]{\bracketsDouble{#1}}
+\newcommand{\share}[2]{\sharing{#1}_{#2}}
+\newcommand{\shareWithDeg}[3]{\share{#1}{#2}^{\parantheses{#3}}}
+\newcommand{\sharingWithDeg}[2]{\sharing{#1}^{\parantheses{#2}}}
+\newcommand{\partyEvaluationPointPlain}{\alpha}
+\newcommand{\partyEvaluationPoint}[1]{\partyEvaluationPointPlain_{#1}}
+\newcommand{\shareProtocol}{\ensuremath{\mathsf{share}}}
+\newcommand{\reconstructProtocol}{\ensuremath{\mathsf{reconstruct}}}
+\newcommand{\corruptedParties}{\mathcal{C}}
