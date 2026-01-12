@@ -52,3 +52,33 @@
 
 \newcommand{\cmark}{\ding{51}}
 \newcommand{\xmark}{\ding{55}}
+
+
+% \inputOnceSoft command (gives warning)
+\makeatletter
+\newcommand{\inputOnceSoft}[1]{%
+\@ifundefined{input@#1}{%
+\expandafter\gdef\csname input@#1\endcsname{}%
+    \input{#1}%
+  }{%
+    \PackageWarning{inputOnce}{File `#1' already input, skipping}%
+  }%
+  }
+\makeatother
+
+% \inputOnce command (gives error)
+\makeatletter
+\newcommand{\inputOnce}[1]{%
+  \@ifundefined{input@#1}{%
+    \expandafter\gdef\csname input@#1\endcsname{}%
+    \input{#1}%
+  }{%
+    \PackageError{inputOnce}{%
+      File `#1' was already input%
+    }{%
+      Each file may only be input once.\MessageBreak
+      Check for duplicate \string\inputOnce\space calls.%
+    }%
+  }%
+}
+\makeatother
