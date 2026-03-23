@@ -17,6 +17,8 @@
 *.swp
 *.synctex.gz
 *.synctex(busy)
+*.bcf
+*.run.xml
 
 
 # Ignore main
