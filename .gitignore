@@ -19,6 +19,8 @@
 *.synctex(busy)
 *.bcf
 *.run.xml
+*-blx.bib
+*.bcf-SAVE-ERROR
 
 
 # Ignore main
