@@ -24,3 +24,34 @@
 \newcommand{\protocol}[1]{\protocolPlain_{\text{#1}}}
 \newcommand{\abortSymbol}{\bot}
 \newcommand{\nonAbortSymbol}{\top}
+
+% Security
+\newcommand{\securityParameter}{\lambda}
+\newcommand{\statisticalSecurityParameter}{\securityParameter_{\mathrm{s}}}
+\newcommand{\computationalSecurityParameter}{\securityParameter_{\mathrm{c}}}
+
+% Statistical Distance and Indistinguishability
+\newcommand{\statisticalDistancePlain}{\mathsf{SD}}
+\newcommand{\statisticalDistance}[2]{\statisticalDistancePlain\parenthesesNoSpace{#1,#2}}
+\newcommand{\statisticalDistanceDefault}{\statisticalDistance{X}{Y}}
+\newcommand{\statisticallyIndistinguishable}{\stackrel{\mathrm{s}}{\approx}}
+
+% Discrete Gaussian
+\newcommand{\DGPlainUnparameterized}{\mathcal{D}}
+\newcommand{\DGPlainParameterizedDomainMeanStd}[3]{\DGPlainUnparameterized_{#1,#2,#3}}
+\newcommand{\DGPlainParameterizedDefault}{\DGPlainParameterizedDomainMeanStd{\Z}{\DGMean}{\DGStd}}
+\newcommand{\DGDomainMeanStdInp}[4]{\DGPlainParameterizedDomainMeanStd{#1}{#2}{#3}\parenthesesNoSpace{#4}}
+\newcommand{\DGDefault}{\DGDomainMeanStdInp{\Z}{\DGMean}{\DGStd}{\DGInputVar}}
+\newcommand{\DGInputVar}{x}
+\newcommand{\DGMean}{\mu}
+\newcommand{\DGStd}{\sigma}
+
+% Negligible
+\newcommand{\negligiblePlain}{\mathsf{negl}}
+\newcommand{\negligible}[1]{\negligiblePlain\parenthesesNoSpace{#1}}
+\newcommand{\negligibleDefault}{\negligible{\securityParameter}}
+
+% Polynomials
+\newcommand{\indeterminate}{X}
+\newcommand{\polynomialRing}[2]{#1\bracketsNoSpace{#2}}
+\newcommand{\realPolynomialRingDefault}{\polynomialRing{\R}{\indeterminate}}
