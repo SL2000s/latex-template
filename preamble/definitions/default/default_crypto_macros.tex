@@ -7,17 +7,25 @@
 % Secret sharing
 \newcommand{\party}[1]{P_{#1}}
 \newcommand{\parties}{\mathcal{P}}
+\newcommand{\corruptParties}{\mathcal{C}}
+\newcommand{\honestParties}{\mathcal{H}}
 \newcommand{\numParties}{n}
 \newcommand{\threshold}{t}
 \newcommand{\sharing}[1]{\bracketsDouble{#1}}
-\newcommand{\share}[2]{\sharing{#1}_{#2}}
-\newcommand{\shareWithDeg}[3]{\share{#1}{#2}^{\parentheses{#3}}}
 \newcommand{\sharingWithDeg}[2]{\sharing{#1}^{\parentheses{#2}}}
+\newcommand{\shareShort}[2]{#1_{#2}}
+\newcommand{\shareShortWithDeg}[3]{\share{#1}{#2}^{\parentheses{#3}}}
+\newcommand{\shareLong}[2]{\sharing{#1}_{#2}}
+\newcommand{\shareLongWithDeg}[3]{\share{#1}{#2}^{\parentheses{#3}}}
+\newcommand{\share}[2]{\shareShort{#1}{#2}}
+\newcommand{\shareWithDeg}[3]{\shareShort{#1}{#2}{#3}}
 \newcommand{\partyEvaluationPointPlain}{\alpha}
 \newcommand{\partyEvaluationPoint}[1]{\partyEvaluationPointPlain_{#1}}
 \newcommand{\shareProtocol}{\ensuremath{\mathsf{share}}}
 \newcommand{\reconstructProtocol}{\ensuremath{\mathsf{reconstruct}}}
-\newcommand{\corruptedParties}{\mathcal{C}}
+\newcommand{\secret}{s}
+\newcommand{\secretSpace}{\mathcal{M}}
+\newcommand{\shareSpace}{\mathcal{R}}
 
 % Protocols
 \newcommand{\protocolPlain}{\Pi}
