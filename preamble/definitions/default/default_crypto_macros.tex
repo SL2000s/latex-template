@@ -25,6 +25,16 @@
 \newcommand{\abortSymbol}{\bot}
 \newcommand{\nonAbortSymbol}{\top}
 
+% Functionalities and UC
+\newcommand{\functionalityPlain}{\ensuremath{\mathcal{F}}}
+\newcommand{\functionality}[1]{\ensuremath{\functionalityPlain_{\textsf{#1}}}}
+\newcommand{\environment}{\ensuremath{\mathcal{Z}}}
+\newcommand{\adversary}{\ensuremath{\mathcal{A}}}
+\newcommand{\simulator}{\ensuremath{\mathcal{S}}}
+\newcommand{\sid}{\ensuremath{\mathsf{sid}}}
+\newcommand{\cmd}[2]{\ensuremath{\left(\mathsf{#1},\sid,#2\right)}}
+\newcommand{\cmde}[1]{\ensuremath{(\mathsf{#1},\sid)}}
+
 % Security
 \newcommand{\securityParameter}{\lambda}
 \newcommand{\statisticalSecurityParameter}{\securityParameter_{\mathrm{s}}}
