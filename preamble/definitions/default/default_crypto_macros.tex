@@ -22,7 +22,9 @@
 \newcommand{\partyEvaluationPointPlain}{\alpha}
 \newcommand{\partyEvaluationPoint}[1]{\partyEvaluationPointPlain_{#1}}
 \newcommand{\shareProtocol}{\ensuremath{\mathsf{share}}}
-\newcommand{\reconstructProtocol}{\ensuremath{\mathsf{reconstruct}}}
+\newcommand{\shareProtocolWithInput}[1]{\shareProtocol\parenthesesNoSpace{#1}}
+\newcommand{\reconstructProtocol}{\ensuremath{\mathsf{rec}}}
+\newcommand{\reconstructProtocolWithInput}[1]{\reconstructProtocol\parenthesesNoSpace{#1}}
 \newcommand{\secret}{s}
 \newcommand{\secretSpace}{\mathcal{M}}
 \newcommand{\shareSpace}{\mathcal{R}}
